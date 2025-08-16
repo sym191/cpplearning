@@ -1,5 +1,5 @@
 #include <sys/socket.h>
 
-namespace net{
+namespace net::echo{
     void foo();
 }

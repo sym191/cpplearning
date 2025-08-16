@@ -7,7 +7,7 @@
 #include <vector>
 #include <unistd.h>
 
-void net::foo(){
+void net::echo::foo(){
     int sc = socket(AF_INET, SOCK_STREAM, 0);
     struct sockaddr_in ad{AF_INET, htons(12345), inet_addr("127.0.0.1")};
 
