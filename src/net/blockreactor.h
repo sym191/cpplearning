@@ -1,4 +1,5 @@
-#include "echo.h"
+#pragma once
+
 #include <cstring>
 #include <sys/socket.h>
 #include <netinet/in.h>

@@ -1,0 +1,29 @@
+Checks: >
+  -*,  # 先禁用所有默认检查
+  bugprone-argument-comment,
+  bugprone-bool-pointer-implicit-conversion,
+  bugprone-integer-division,
+  bugprone-not-null-terminated-result,
+  bugprone-use-after-move,
+  performance-inefficient-vector-operation,
+  performance-unnecessary-copy-initialization,
+  readability-convert-member-functions-to-static,
+  readability-function-size,
+  readability-identifier-naming,
+  readability-redundant-code,
+  modernize-avoid-c-arrays,
+  modernize-use-auto,
+  modernize-use-range-loop,
+  misc-unused-parameters
+
+CheckOptions:
+  - key: readability-identifier-naming.FunctionCase
+    value: camelCase
+  - key: readability-identifier-naming.ClassCase
+    value: PascalCase
+  - key: readability-identifier-naming.VariableCase
+    value: camelCase
+  - key: readability-identifier-naming.ConstantCase
+    value: UPPER_CASE
+  - key: modernize-use-nullptr.NullMacros
+    value: NULL
