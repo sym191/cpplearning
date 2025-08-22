@@ -4,9 +4,9 @@ template<typename T>
 class Singleton{
 protected:
     Singleton() = default;
+public:
     Singleton(const Singleton&) = delete;
     Singleton& operator= (Singleton&) = delete;
-public:
     static T& get_instance(){
         static T instance_;
         return instance_;

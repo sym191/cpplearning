@@ -6,3 +6,7 @@
 namespace mythread::async {
     void foo();
 }
+
+namespace mythread::task{
+    void foo();
+}

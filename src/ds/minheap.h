@@ -86,10 +86,10 @@ template <typename T>
             heap_.push_back(std::forward<U>(val));
             _up_node(heap_.size() - 1);
         }
-        std::size_t size() const {
+        [[nodiscard]] std::size_t size() const {
             return heap_.size();
         }
-        bool empty() const {
+        [[nodiscard]] bool empty() const {
             return heap_.empty();
         }
     };

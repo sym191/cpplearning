@@ -11,7 +11,7 @@ void net::echo::foo(){
     int sc = socket(AF_INET, SOCK_STREAM, 0);
     struct sockaddr_in ad{AF_INET, htons(12345), inet_addr("127.0.0.1")};
 
-    struct sockaddr* addr = reinterpret_cast<sockaddr*>(&ad);
+    auto addr = reinterpret_cast<sockaddr*>(&ad);
     if (bind(sc, addr, sizeof(*addr)) < 0){
         std::cout << "bind err" << std::endl;
         return;
