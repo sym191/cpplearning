@@ -1,3 +1,5 @@
+// #ifdef __linux__
+
 // #include "select.h"
 // #include <cstddef>
 // #include <cstring>
@@ -41,6 +43,7 @@
 //     }
 //     socklen_t len = sizeof(ad);
 //     std::vector<std::thread> t;
+//     std::vector<int> socs;
 //     while(true){
 //         struct sockaddr_in client_addr {};
 //         socklen_t client_len = sizeof(client_addr);
@@ -50,11 +53,16 @@
 //             continue;
 //         }
 //         std::cout << con_soc << "connect success!" << "client ip:" << inet_ntoa(client_addr.sin_addr) << "\tclient port:" << ntohs(client_addr.sin_port) << std::endl;
-//         t.emplace_back(&_block_read, con_soc);
+//         // t.emplace_back(&_block_read, con_soc);
+//         socs.push_back(con_soc);
 //     }
+//     // int res = select(sc, );
 //     for(auto& _t : t){
 //         _t.join();
 //     }
 //     return 0;
 // }
 
+
+
+// #endif

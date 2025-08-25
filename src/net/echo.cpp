@@ -1,3 +1,4 @@
+#ifdef __linux__
 #include "echo.h"
 #include <cstring>
 #include <sys/socket.h>
@@ -38,3 +39,6 @@ void net::echo::foo(){
         std::cout << str << std::endl;
     }
 }
+
+
+#endif

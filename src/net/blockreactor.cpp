@@ -1,3 +1,5 @@
+#ifdef __linux__
+
 #include "blockreactor.h"
 #include <cstddef>
 #include <cstring>
@@ -58,3 +60,4 @@ int net::blockreactor::foo(const unsigned short& domain, const unsigned short& p
     return 0;
 }
 
+#endif

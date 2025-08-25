@@ -7,7 +7,9 @@
 #include "multithread/multithread.h"
 #include "spdlog/spdlog.h"
 #include "asio.hpp"
+#include "designpattern/dp.h"
 
 int main(){
-    mythread::task::foo();
+    // mythread::task::foo();
+    dp::composite::test();
 }
