@@ -2,5 +2,7 @@
 
 #include "echo.h"
 #include "blockreactor.h"
+#include "select.h"
+#include "client.h"
 
 #endif

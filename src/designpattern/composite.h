@@ -41,7 +41,7 @@ namespace dp::composite{
     public:
         using file_t = std::string;
         File(const file_t& name, const file_t& content);
-        ~File() = default;
+        ~File() override = default;
         void show(const std::string& preFile) override;
         std::string get_name() override{
             return name_;
