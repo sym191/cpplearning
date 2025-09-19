@@ -3,6 +3,30 @@ project(cpplearn)
 
 set(CMAKE_CXX_STANDARD 20)
 
+# 可选的优化级别设置，默认为 O0（无优化）
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE "Debug" CACHE STRING
+    "Choose the type of build, options are: Debug Release RelWithDebInfo MinSizeRel."
+    FORCE
+  )
+endif()
+
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g" CACHE STRING "Debug build flags" FORCE)
+set(CMAKE_CXX_FLAGS_RELEASE "-O2" CACHE STRING "Release build flags" FORCE)
+set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g" CACHE STRING "Release with debug info build flags" FORCE)
+set(CMAKE_CXX_FLAGS_MINSIZEREL "-Os" CACHE STRING "Minimal size build flags" FORCE)
+
+# 全局编译选项
+add_compile_options(
+    -Wall
+    -Wextra
+    -Wpedantic
+    -pthread
+)
+
+# 链接选项
+link_libraries(-pthread)
+
 file(GLOB_RECURSE SOURCES "src/*.cpp" "include/*.h" "src/*.h")
 include(FetchContent)
 
